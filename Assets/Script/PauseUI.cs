@@ -29,6 +29,7 @@ public class PauseUI : MonoBehaviour
     }    
     public void ResumeGame()
     {
+        isPaused = false;
 		Cursor.lockState = CursorLockMode.Locked;
         pauseMenu.SetActive(false);
         Time.timeScale = 1f;
@@ -36,6 +37,7 @@ public class PauseUI : MonoBehaviour
     
     public void PauseGame()
     {
+        isPaused = true;
 		Cursor.lockState = CursorLockMode.None;
         pauseMenu.SetActive(true);
         Time.timeScale = 0f;
